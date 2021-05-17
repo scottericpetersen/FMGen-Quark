@@ -68,8 +68,7 @@ returns:: (describe returnvalue here)
 EXAMPLES::
 
 code::
-// some example code
-::
+
 // fire it up!
 f = FMGen(10, fm_type: 2);
 
@@ -90,3 +89,4 @@ f.play(\fmgen_b_4, 10, 60, \minor, 2);
 
 // Save a synthdef you like with an optional description.
 f.save(\fmgen_b_4, "A dirty synth bass: best around MIDI note 30");
+::
