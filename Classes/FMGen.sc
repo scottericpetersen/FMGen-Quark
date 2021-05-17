@@ -336,9 +336,9 @@ Out.ar(0, Pan2.ar(slct, pan, amp));
 		("Highest Category C Synth: " ++ ci).postln;
 	}
 
-	defs {|def_name, all=0|
+	defs {|which|
 
-		if (all == 0) { definitions[def_name].postln} { definitions.postln; };
+		if (which == \all) { definitions.postcs} {definitions[which].postln  };
 	}
 
 	play {|which=\all, num_notes=10, root_note=36, scale=\minor, num_octaves=2|
