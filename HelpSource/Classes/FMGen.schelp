@@ -59,7 +59,7 @@ ARGUMENT:: which
 A symbol. Can be \all, which will audition all SynthDefs generated, or the name of a specific SynthDef.
 
 ARGUMENT:: num_notes
-An Integer. The total number of test notes randomly generated using the synth(s).
+An integer. The total number of test notes randomly generated using the synth(s).
 
 ARGUMENT:: root_note
 An integer. The MIDI note that will be the root of your pitch collection. 
@@ -73,24 +73,17 @@ Total number of octaves above the root note. Used with scale to generate a pitch
 METHOD:: defs
 (describe method here)
 
-ARGUMENT:: arga
-(describe argument here)
-
-ARGUMENT:: argb
-(describe argument here)
-
-returns:: (describe returnvalue here)
+ARGUMENT:: which
+A symbol. If \all, will postcs the Dictionary containing all keys/values (synthdefs). Otherwise, symbol must be a valid SynthDef name (key) stored in the Dictionary.
 
 METHOD:: save
-(describe method here)
+If def_name (below) is a valid key (SynthDef stored in the Dictionary created by .generate or .new), a file dialog will prompt you for a location and file name for your saved SynthDef.
 
-ARGUMENT:: arga
-(describe argument here)
+ARGUMENT:: def_name
+A symbol. Must be the name of a SynthDef found in the Dictionary.
 
-ARGUMENT:: argb
-(describe argument here)
-
-returns:: (describe returnvalue here)
+ARGUMENT:: description
+A string. Optional. A brief description of the SynthDef. Ex. "A sick, acid bass. So dank."
 
 EXAMPLES::
 
