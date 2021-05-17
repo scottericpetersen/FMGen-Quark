@@ -4,41 +4,70 @@ categories:: Extensions
 related:: Classes/Quarks
 
 DESCRIPTION::
-FMGen is a class to generate n number of FM SynthDefs stored in SuperCollider code (rather than def file format.) FM configurations include multimodulator, multicarrier, and parallel. The SynthDefs are generated pseudorandomly with class arguments for specifying number, type, etc. The original code inspiration for this Quark is the James McCartney example file '100 FM Synths.scd' included in the SuperCollider distribution examples.
+FMGen is a class to generate n number of FM SynthDefs stored in SuperCollider code (rather than def file format.) FM configurations are as follows:
+
+Category A: Three (3) Summed (parallel) CM pairs.
+Category B: Two (2) Summed modulator->modulator->carrier chains. (Series Multi-modulator FM)
+Category C: Two (2) Summed modulator-+->carrier pairs. (Parellel Multi-carrier FM)
+					                           |
+					                           +->carrier 
+
+The SynthDefs are generated pseudorandomly with class arguments for specifying number, type, etc. Files with human-readable SuperCollider code are written to the fmgen-defs folder in the directory with the FMGen.sc file. The original code inspiration for this Quark is the James McCartney example file '100 FM Synths.scd' included in the SuperCollider distribution examples.
 
 CLASSMETHODS::
 
 METHOD:: new
-(describe method here)
+Creates a new instance of FMGen, generates the num_defs number of SynthDefs, adds them, and makes them available for auditioning, saving, etc. (See below instance methods.)
 
-ARGUMENT:: arga
-(describe argument here)
+ARGUMENT:: num_defs
+The total number of random FM SynthDefs to generate. Ex. 10, 25, or 47. 
 
-ARGUMENT:: argb
-(describe argument here)
+ARGUMENT:: max_attack
+Used internally as the high value for the percussive envelope attack argument. This is the maximum attack possible.
 
-returns:: (describe returnvalue here)
+ARGUMENT:: max_release
+Used internally as the high value for the percussive envelope release argument. This is the maximum attack possible.
+
+ARGUMENT:: fm_type
+0 will randomly select from the three types of configuration. 1 will choose only Category A, 2 Category B, and 3 Category C.
+
+returns:: An FMGen.
 
 INSTANCEMETHODS::
 
 METHOD:: generate
-(describe method here)
+Called by "new", generate can be run on an instance of FMGen to generate a new batch of random FM Synths. The Dictionary storing the SynthDefs will be cleared out, however, the files written (containing all SynthDefs generated remain.)
 
-ARGUMENT:: arga
-(describe argument here)
+ARGUMENT:: num_defs
+The total number of random FM SynthDefs to generate. Ex. 10, 25, or 47. 
 
-ARGUMENT:: argb
-(describe argument here)
+ARGUMENT:: max_attack
+Used internally as the high value for the percussive envelope attack argument. This is the maximum attack possible.
 
-returns:: (describe returnvalue here)
+ARGUMENT:: max_release
+Used internally as the high value for the percussive envelope release argument. This is the maximum attack possible.
+
+ARGUMENT:: fm_type
+0 will randomly select from the three types of configuration. 1 will choose only Category A, 2 Category B, and 3 Category C.
+
+returns:: An FMGen.
 
 METHOD:: play
 (describe method here)
 
-ARGUMENT:: arga
+ARGUMENT:: which
 (describe argument here)
 
-ARGUMENT:: argb
+ARGUMENT:: num_notes
+(describe argument here)
+
+ARGUMENT:: root_note
+(describe argument here)
+
+ARGUMENT:: scale
+(describe argument here)
+
+ARGUMENT:: num_octaves
 (describe argument here)
 
 returns:: (describe returnvalue here)
