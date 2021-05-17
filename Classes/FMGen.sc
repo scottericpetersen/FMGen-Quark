@@ -1,6 +1,6 @@
 FMGen {
 
-	var <>definitions;
+	var definitions;
 	var carrierF, middleF, modulatorF;
 	var mod1, mod2, mod3;
 	var mid1, mid2, mid3;
