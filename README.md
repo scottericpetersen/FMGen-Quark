@@ -7,4 +7,4 @@ FMGen is a class to generate n number of FM SynthDefs stored in SuperCollider co
 ### Installation
 
 Open up SuperCollider and evaluate the following line of code:
-`Quarks.install("https://github.com/scottericpetersen/FMGen Quark")`
+`Quarks.install("https://github.com/scottericpetersen/FMGen-Quark")`
