@@ -1,0 +1,11 @@
+(
+  name: "FMGen",
+  summary: "Generate, audition, and save FM SynthDefs using random procedures.",
+  version: "1.0.0",
+  schelp: "FMGen.schelp",
+  dependencies: nil,
+  license: "GNU GPL v3.0",
+  copyright: "Scott Eric Petersen, 2021",
+  ext_dependency: nil,
+  url: "https://github.com/scottericpetersen/FMGen-Quark"
+)
