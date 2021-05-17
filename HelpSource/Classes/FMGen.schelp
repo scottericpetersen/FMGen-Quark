@@ -81,7 +81,7 @@ f.defs(all: 1);
 // Hear all the synths in order
 f.play(\all)
 
-// Specifiy root note, scale, and range in number of octaves :: WORKS
+// Specifiy root note, scale, and range in number of octaves
 f.play(\all, 15, 48, \minor, 2);
 
 // Hear only one synth
