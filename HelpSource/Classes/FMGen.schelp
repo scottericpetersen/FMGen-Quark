@@ -56,21 +56,19 @@ METHOD:: play
 (describe method here)
 
 ARGUMENT:: which
-(describe argument here)
+A symbol. Can be \all, which will audition all SynthDefs generated, or the name of a specific SynthDef.
 
 ARGUMENT:: num_notes
-(describe argument here)
+An Integer. The total number of test notes randomly generated using the synth(s).
 
 ARGUMENT:: root_note
-(describe argument here)
+An integer. The MIDI note that will be the root of your pitch collection. 
 
 ARGUMENT:: scale
-(describe argument here)
+A symbol. \minor, \major, or any scale understood by class Scale.
 
 ARGUMENT:: num_octaves
-(describe argument here)
-
-returns:: (describe returnvalue here)
+Total number of octaves above the root note. Used with scale to generate a pitch collection from which to randomly choose.
 
 METHOD:: defs
 (describe method here)
