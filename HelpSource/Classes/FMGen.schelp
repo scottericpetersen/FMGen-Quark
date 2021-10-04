@@ -9,8 +9,8 @@ code::
 Category A: Three (3) Summed (parallel) CM pairs.
 Category B: Two (2) Summed modulator->modulator->carrier chains. (Series Multi-modulator FM)
 Category C: Two (2) Summed modulator-+->carrier pairs. (Parallel Multi-carrier FM)
-			                        |
-				                +->carrier 
+			                         |
+				                     +->carrier 
 ::
 The SynthDefs are generated pseudorandomly with class arguments for specifying number, type, etc. Files with human-readable SuperCollider code are written to the fmgen-defs folder in the directory with the FMGen.sc file. The original code inspiration for this Quark is the James McCartney example file '100 FM Synths.scd' included in the SuperCollider distribution examples.
 
