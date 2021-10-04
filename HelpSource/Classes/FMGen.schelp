@@ -96,7 +96,7 @@ f = FMGen(10, fm_type: 2);
 f.defs(\fmgen_b_1);
 
 // Print all defs from the current run
-f.defs(all: 1);
+f.defs(\all);
 
 // Hear all the synths in order
 f.play(\all)
