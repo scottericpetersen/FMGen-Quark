@@ -29,8 +29,8 @@ FMGen {
 	generate {|num_defs, max_attack, max_release, fm_type|
 
 		definitions = Dictionary.new();
-		date = "date +%s".unixCmdGetStdOut;
-		date.removeAt(date.size - 1);
+		date = Date.getDate.rawSeconds.asInteger;
+		// date.removeAt(date.size - 1);
 		// Create the folder synthdef-files in the same dir as this doc.
 		path = ("fmgen-defs/fmgen_synthdefs_" ++ date ++ ".scd").resolveRelative;
 		sdf = File.open(path, "w+");
